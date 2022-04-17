@@ -1,3 +1,5 @@
+
+
 # Overview
 
 Git is a type of version control system (VCS) that makes it easier to track changes to files.
@@ -12,7 +14,7 @@ In complex projects, where multiple people might be making changes to the same f
 If you start to understand how git works, you’ll see why conflicts occur and how to recover from these situations easily.
 
 
-## Start your own repository from scratch 
+## Start a repo from scratch 
 
 In any existing folder on your computer type :
 
@@ -35,7 +37,7 @@ This will download a .git repository from the internet (GitHub) to your computer
 
 The URL you specify here is called the remote origin (the place where the files were originally downloaded from). This term will be used later on.
 
-## View the current status of your project
+## View the status of your project
 
 ```bash
 git status
@@ -45,7 +47,7 @@ This will print some basic information, such as which files have recently been m
 
 You should check your status anytime you’re confused. Git will print additional information depending on what’s currently going on in order to help you out.
 
-## Create a new branch name
+## Create a new branch
 
 ```bash
 git branch <new-branch-name>
@@ -61,7 +63,7 @@ That’s really the core function of git: To save checkpoints (revisions) and sh
 If you’ve ever created a checkpoint to something, you’ll be able to get back to it later as long as your .git folder is intact.
 
 
-## Check out a particular branch
+## Check out a branch
 
 ```bash
 git checkout <existing-branch-name>
@@ -89,7 +91,7 @@ For each group of changes, you’ll see what the file used to look like (prefixe
 
 See further down for more advanced examples of this command.
 
-## Stage your changes to prepare for committing them
+## Stage your changes
 
 ```bash
 git add <files>
@@ -125,7 +127,7 @@ You can use the -m flag as a shortcut to write a message. For example:
 git commit -m “Add a new feature”
 ```
 
-## Push your branch to upload it somewhere else
+## Push your branch on the server
 
 ```bash
 git push origin <branch-name>
