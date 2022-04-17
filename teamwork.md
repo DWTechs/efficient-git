@@ -1,10 +1,3 @@
----
-layout: default
-title: Teamwork
-permalink: /git/teamwork/
-
----
-
 
 # Teamwork
 
