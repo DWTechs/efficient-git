@@ -1,9 +1,3 @@
----
-layout: default
-title: Overview
-permalink: /git/overview/
-
----
 
 
 # Overview
