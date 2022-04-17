@@ -1,9 +1,4 @@
----
-layout: default
-title: Git
-permalink: /git/
-has_toc: true
----
+
 
 # Git
 
