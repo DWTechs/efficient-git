@@ -37,18 +37,18 @@
         {% endif %}
       </div><!-- end banner -->
 
-    <div class="wrapper">
+
       <ul>
         {% for item in site.menu %}
           <li class="menu-item-{{ loop.index }}">
             <a href="{{ item.url }}" title="Go to {{ item.label }}">{{ item.label }}</a>
           </li>
         {% endfor %}
-      </ul>
-      
-      <!-- <nav>
+      </ul> 
+    <div class="wrapper">
+      <nav>
         <ul></ul>
-      </nav> -->
+      </nav>
       <section>
         {{ content }}
 
@@ -57,7 +57,7 @@
         {% if site.github.is_project_page %}
           <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
+        <p><small><a href="{{ site.github.repository_url }}">View On GitHub</a></small></p>
       </footer>
     </div>
   </body>
