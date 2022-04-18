@@ -2,9 +2,9 @@ theme: jekyll-theme-leap-day
 title: Efficient Git
 description: Use git efficiently on your project and avoid usual mistakes
 menu:
-  - { label: Overview, url: /index}
-  - { label: Team work, url: /teamwork}
-  - { label: Merge, url: /merge}
-  - { label: Tag, url: /tag}
-  - { label: Gitflow, url: /gitflow}
-  - { label: Version, url: /version}
+  - { label: Overview, url: /efficient-git/index}
+  - { label: Team work, url: /efficient-git/teamwork}
+  - { label: Merge, url: /efficient-git/merge}
+  - { label: Tag, url: /efficient-git/tag}
+  - { label: Gitflow, url: /efficient-git/gitflow}
+  - { label: Version, url: /efficient-git/version}
