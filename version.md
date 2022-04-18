@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Semantic Versioning
-permalink: /git/version/
+permalink: /version/
 
 ---
 

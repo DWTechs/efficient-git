@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Merge
-permalink: /git/merge/
+permalink: /merge/
 
 ---
 

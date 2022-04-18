@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tag
-permalink: /git/tag/
+permalink: /tag/
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Git
+title: Gitflow
 has_children: true
-permalink: /git/gitflow/
+permalink: /gitflow/
 ---
 
 # Gitflow

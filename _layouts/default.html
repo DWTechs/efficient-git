@@ -38,9 +38,17 @@
       </div><!-- end banner -->
 
     <div class="wrapper">
-      <nav>
+      <ul>
+        {% for item in site.menu %}
+          <li class="menu-item-{{ loop.index }}">
+            <a href="{{ item.url }}" title="Go to {{ item.label }}">{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      
+      <!-- <nav>
         <ul></ul>
-      </nav>
+      </nav> -->
       <section>
         {{ content }}
 

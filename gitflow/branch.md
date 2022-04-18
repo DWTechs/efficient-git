@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Workflow
-permalink: /git/gitflow/branch/
+permalink: /gitflow/branch/
 
 ---
 

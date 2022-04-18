@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conventional commits
-permalink: /git/gitflow/commit/
+permalink: /gitflow/commit/
 
 ---
 
