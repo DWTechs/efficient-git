@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Efficient Git
+permalink: /
 ---
 
 # Overview

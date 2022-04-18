@@ -1,7 +1,5 @@
 ---
 layout: default
-title: Gitflow
-has_children: true
 permalink: /gitflow/
 ---
 

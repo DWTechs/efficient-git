@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Semantic Versioning
 permalink: /version/
 
 ---

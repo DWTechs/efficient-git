@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Team work
 permalink: /teamwork/
 
 ---
