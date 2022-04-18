@@ -5,7 +5,7 @@ permalink: /version/
 
 ---
 
-# Semantic Versioning 2.0.0
+# Semantic Versioning
 
 ## Summary
 
@@ -42,7 +42,7 @@ Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 Once a versioned package has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released as a new version.
 
-## History of a development
+## History
 
 - Major version zero (0.y.z) is for initial development. Anything MAY change at any time. The application SHOULD NOT be considered stable.
 
@@ -151,7 +151,7 @@ Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-bet
 ```
 
 
-## Initial development phase
+## Initial phase
 
 Start your initial development release at 0.1.0 and then increment the minor version for each subsequent release.
 
@@ -160,11 +160,11 @@ Start your initial development release at 0.1.0 and then increment the minor ver
 If your software is being used in production, it should probably already be 1.0.0. If you have a stable application on which users have come to depend, you should be 1.0.0. If you’re worrying a lot about backwards compatibility, you should probably already be 1.0.0.
 If you’re changing the application every day you should either still be in version 0.y.z or on a separate development branch working on the next major version.
 
-## If even the tiniest backwards incompatible changes to the application require a major version bump, we could end up at version 42.0.0 very rapidly.
+## Bump to a major version.
 
 This is a question of responsible development and foresight. Incompatible changes should not be introduced lightly to software that has a lot of dependent code. The cost that must be incurred to upgrade can be significant. Having to bump major versions to release incompatible changes means you’ll think through the impact of your changes, and evaluate the cost/benefit ratio involved.
 
-## Releasing a backwards incompatible change as a minor version by mistake
+## Releasing a backwards incompatibility by mistake
 
 As soon as you realize that you’ve broken the Semantic Versioning spec, fix the problem and release a new minor version that corrects the problem and restores backwards compatibility. Even under this circumstance, it is unacceptable to modify versioned releases. If it’s appropriate, document the offending version and inform your users of the problem so that they are aware of the offending version.
 
@@ -172,7 +172,9 @@ As soon as you realize that you’ve broken the Semantic Versioning spec, fix th
 
 That would be considered compatible since it does not affect the application. Software that explicitly depends on the same dependencies as your package should have their own dependency specifications and the author will notice any conflicts. Determining whether the change is a patch level or minor level modification depends on whether you updated your dependencies in order to fix a bug or introduce new functionality. In which case it’s a minor level increment.
 
-## Altering the aplication in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)
+## Altering the aplication 
+
+(i.e. the code incorrectly introduces a major breaking change in a patch release)
 
 Use your best judgment. If you have a huge audience that will be drastically impacted by changing the behavior back to what the public API intended, then it may be best to perform a major version release, even though the fix could strictly be considered a patch release. Remember, Semantic Versioning is all about conveying meaning by how the version number changes. If these changes are important to your users, use the version number to inform them.
 
@@ -180,10 +182,10 @@ Use your best judgment. If you have a huge audience that will be drastically imp
 
 Deprecating existing functionality is a normal part of software development and is often required to make forward progress. When you deprecate part of your public API, you should do two things: (1) update your documentation to let users know about the change, (2) issue a new minor release with the deprecation in place. Before you completely remove the functionality in a new major release there should be at least one minor release that contains the deprecation so that users can smoothly transition to the new API.
 
-## Does SemVer have a size limit on the version string
+## Size limit on the version string
 
-No, but use good judgment. A 255 character version string is overkill and unreadable.
+Use good judgment. A 255 character version string is overkill and unreadable.
 
-## Using v in semantic version : “v1.2.3”
+## Using v
 
 “v1.2.3” is not a semantic version. However, prefixing a semantic version with a “v” is a common way (in English) to indicate it is a version number. Abbreviating “version” as “v” is often seen with version control. Example: git tag v1.2.3 -m "Release version 1.2.3", in which case “v1.2.3” is a tag name and the semantic version is “1.2.3”.
