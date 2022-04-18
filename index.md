@@ -1,11 +1,7 @@
 ---
 layout: default
-title: Git
+title: Efficient Git
 ---
-
-
-# Git
-
 
 # Overview
 
