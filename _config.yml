@@ -1,4 +1,5 @@
 theme: jekyll-theme-leap-day
+show_downloads: false
 title: Efficient Git
 description: Use git efficiently on your project and avoid usual mistakes
 menu:
