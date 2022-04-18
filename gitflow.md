@@ -53,8 +53,6 @@ When a feature is complete and tested, it gets merged back into develop. Feature
 
 When a feature is way behind develop because of a long development process, merge develop into the feature branch to stay tuned.
 
-### example
-
 ```bash
 git checkout develop
 git checkout -b feature/csv-export
@@ -72,8 +70,6 @@ Once it's ready to ship, the release branch gets merged into master and tagged w
 
 Using a dedicated branch to prepare releases makes it possible for one team to polish the current release while another team continues working on features for the next release. It also creates well-defined phases of development.
 
-### example
-
 ```bash
 git checkout develop
 git checkout -b release/0.1.0
@@ -86,8 +82,6 @@ From : **develop**
 Each new bug should reside in its own branch, which can be pushed to the central repository for backup and collaboration.
 
 When a bugfux is complete and tested, it gets merged back into develop. Bugfixes never interact directly with master.
-
-### example
 
 ```bash
 git checkout develop
@@ -104,8 +98,6 @@ This is the only branch that should fork directly off of master. As soon as the 
 
 Having a dedicated line of development for bug fixes lets your team address issues without interrupting the rest of the workflow or waiting for the next release cycle.
 
-### example
-
 ```bash
 git checkout master
 git checkout -b hotfix/#344/wrong-email-regex
@@ -120,8 +112,6 @@ Useful technical debt reduction, ESlint/SonarQube fix,
 Each refactor should reside in its own branch, which can be pushed to the central repository for backup and collaboration.
 
 When refactor is complete and tested, it gets merged back into develop. Tests never interact directly with master.
-
-### example
 
 ```bash
 git checkout develop
@@ -139,8 +129,6 @@ User documentation update has to be developed in a feature branch.
 
 When documentation is complete, it gets merged back into develop. Documentations never interact directly with master.
 
-### example
-
 ```bash
 git checkout develop
 git checkout -b doc/husky-pre-commit
@@ -154,8 +142,6 @@ Each test update should reside in its own branch, which can be pushed to the cen
 
 When test is complete, it gets merged back into develop. Tests never interact directly with master.
 
-### example
-
 ```bash
 git checkout develop
 git checkout -b test/csv-export
@@ -168,8 +154,6 @@ From : **develop**
 Each build update should reside in its own branch, which can be pushed to the central repository for backup and collaboration.
 
 When build is complete and tested, it gets merged back into develop. Builds never interact directly with master.
-
-### example
 
 ```bash
 git checkout develop
@@ -243,8 +227,6 @@ A commit can contain the following structural elements :
 - **BREAKING CHANGE:** A commit that has a footer "BREAKING CHANGE:" introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
 - **footers** other than "BREAKING CHANGE: <description>" may be provided and follow a convention similar to git trailer format.
 - **A scope** may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis (ex : feat(parser): add ability to parse arrays).
-
-### examples
 
 ```bash
 $ git commit -am "feat(lang): added polish language"

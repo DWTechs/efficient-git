@@ -1,7 +1,7 @@
 theme: jekyll-theme-leap-day
 show_downloads: false
 title: Efficient Git
-description: Use git efficiently on your project and avoid usual mistakes
+description: Use git efficiently on your projects and avoid usual mistakes
 menu:
   - { label: Overview, url: /efficient-git/index}
   - { label: Teamwork, url: /efficient-git/teamwork}

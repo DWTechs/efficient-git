@@ -6,8 +6,6 @@ permalink: /version/
 
 # Semantic Versioning
 
-## Summary
-
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
 - **MAJOR** version when you make incompatible API changes,
