@@ -1,5 +1,4 @@
 ---
-weight: 1
 geekdocNav: false
 geekdocBreadcrumb: false
 ---
