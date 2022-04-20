@@ -1,5 +1,5 @@
 ---
-weight: 1
+
 ---
 
 - **master**: For production releases.
