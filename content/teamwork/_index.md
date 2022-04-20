@@ -1,5 +1,5 @@
 ---
-weight: 2
+
 ---
 
 ## Starting from the trunk

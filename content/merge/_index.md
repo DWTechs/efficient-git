@@ -1,5 +1,5 @@
 ---
-weight: 4
+
 ---
 
 Join two or more development histories together.

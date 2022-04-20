@@ -1,5 +1,5 @@
 ---
-weight: 1
+
 ---
 
 ## Start a repo from scratch 
