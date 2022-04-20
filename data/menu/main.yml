@@ -11,7 +11,7 @@ main:
       - name: Branches
         ref: "/gitflow/branches"
       - name: Conventional Commits
-        ref: "/gitflow/conventional-commit"
+        ref: "/gitflow/conventional-commits"
   - name: Merge
     ref: "/merge"
   - name: Squash
