@@ -1,5 +1,5 @@
 ---
-weight: 6
+
 ---
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
