@@ -12,7 +12,7 @@ disablePathToLower = true
 
 # (Optional, default false) Render menu from data file in 'data/menu/main.yaml'.
 # See also https://geekdocs.de/usage/menus/#bundle-menu.
-geekdocMenuBundle = false
+geekdocMenuBundle = true
 
 # (Optional, default true) Enables search function with flexsearch.
 # Index is built on the fly and might slow down your website.
