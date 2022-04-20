@@ -1,0 +1,23 @@
+main:
+  - name: Overview
+    ref: "/overview"
+    icon: "gdoc_notification"
+  - name: Teamwork
+    ref: "/teamwork"
+    icon: "gdoc_notification"
+  - name: Gitflow
+    ref: "/gitflow"
+    icon: "gdoc_notification"
+    sub:
+      - name: Branches
+        ref: "/gitflow/branches"
+      - name: Conventional Commits
+        ref: "/gitflow/conventional-commit"
+  - name: Merge
+    ref: "/merge"
+  - name: Squash
+    ref: "/squash"
+  - name: Tag
+    ref: "/tag"
+  - name: Semantic Versioning
+    ref: "/semantic-versioning"
