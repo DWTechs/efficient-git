@@ -1,5 +1,5 @@
 ---
-weight: 2
+
 ---
 
 Following those rules bring great advantages to a project :
