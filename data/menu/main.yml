@@ -1,14 +1,12 @@
 ---
 main:
   - name: Overview
-    ref: "overview"
+    ref: "/overview"
     icon: "gdoc_notification"
   - name: Teamwork
-    ref: "teamwork"
-    icon: "gdoc_notification"
+    ref: "/teamwork"
   - name: Gitflow
     ref: "/gitflow"
-    icon: "gdoc_notification"
     sub:
       - name: Branches
         ref: "/gitflow/branches"
