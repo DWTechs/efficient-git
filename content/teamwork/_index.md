@@ -1,5 +1,5 @@
 ---
-
+title: Teamwork
 ---
 
 ## Starting from the trunk

@@ -21,7 +21,7 @@ geekdocSearch = true
 
 # (Optional, default false) Collapse all menu entries, can not be overwritten
 # per page if enabled. Can be enabled per page via 'geekdocCollapseSection'.
-geekdocCollapseAllSections = true
+geekdocCollapseAllSections = false
 
 # (Optional, default true) Show page navigation links at the bottom of each
 # docs page (bundle menu only).

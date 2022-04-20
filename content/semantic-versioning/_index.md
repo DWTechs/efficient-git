@@ -1,5 +1,5 @@
 ---
-
+title: Semantic Versioning
 ---
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
