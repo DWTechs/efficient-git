@@ -1,5 +1,5 @@
 ---
-weight: 3
+
 ---
 
 Giflow is an alternative Git branching model that involves the use of feature branches and multiple primary branches. Compared to trunk-based development, Giflow has numerous, longer-lived branches and larger commits. 
