@@ -5,8 +5,10 @@ geekdocNav: false
 
 Git can be a massive waste of time and money when your development team is not using it the proper way.
 
-Learn how to Git efficiently with your team with the help of this guide : https://dwtechs.github.io/efficient-git/
+Learn how to Git efficiently with your team with the help of this guide/
 
+
+{{< button relref="/overview/" [size="large"] >}}Getting Started{{< /button >}}
 
 # Git
 
