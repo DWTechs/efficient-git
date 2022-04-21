@@ -1,9 +1,11 @@
 ---
 main:
-  - name: Overview
-    ref: "/overview"
-  - name: Teamwork
-    ref: "/teamwork"
+  - name: Usage
+    sub:
+      - name: Getting started
+        ref: "/overview"
+      - name: Teamwork
+        ref: "/teamwork"
   - name: Gitflow
     ref: "/gitflow"
     sub:
