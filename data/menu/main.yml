@@ -6,12 +6,6 @@ main:
         ref: "/overview"
       - name: Teamwork
         ref: "/teamwork"
-      - name: Merge
-        ref: "/merge"
-      - name: Squash
-        ref: "/squash"
-      - name: Tag
-        ref: "/tag"
   - name: Gitflow
     sub:
       - name: Getting started
@@ -20,5 +14,13 @@ main:
         ref: "/gitflow/branches"
       - name: Conventional Commits
         ref: "/gitflow/conventional-commits"
+  - name: Pro
+    sub:
+      - name: Merge
+        ref: "/merge"
+      - name: Squash
+        ref: "/squash"
+      - name: Tag
+        ref: "/tag"
   - name: Semantic Versioning
     ref: "/semantic-versioning"
