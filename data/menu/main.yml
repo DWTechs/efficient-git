@@ -2,7 +2,6 @@
 main:
   - name: Overview
     ref: "/overview"
-    icon: "gdoc_notification"
   - name: Teamwork
     ref: "/teamwork"
   - name: Gitflow
