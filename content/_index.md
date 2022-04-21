@@ -9,10 +9,10 @@ It makes it easier to track changes to files in a project.
 You can determine exactly what changed, who changed it, and why.
 
 **It is mandatory for coordinating work among multiple people on a project**, and for tracking progress over time by saving “checkpoints”.  
-Understanding how to use it will give a major boost to your resume.
+Understanding how to use it will give a major boost to your daily life.
 
 Git can be a massive waste of time and money when your development team is not using it properly.
 
-Learn how to Git efficiently with your team with the help of this guide.
+Learn **how to Git efficiently** with your team with the help of this guide.
 
 {{< button relref="/overview" size="large" >}}Getting Started{{< /button >}}
