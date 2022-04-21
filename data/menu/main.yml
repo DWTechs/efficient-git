@@ -3,26 +3,26 @@ main:
   - name: Usage
     sub:
       - name: Getting started
-        ref: "/overview"
+        ref: "overview"
       - name: basics
-        ref: "/teamwork"
+        ref: "basics"
       - name: Teamwork
-        ref: "/teamwork"
+        ref: "teamwork"
   - name: Gitflow
     sub:
       - name: Getting started
-        ref: "/gitflow"
+        ref: "gitflow"
       - name: Branches
-        ref: "/gitflow/branches"
+        ref: "branch"
       - name: Conventional Commits
-        ref: "/gitflow/conventional-commits"
-  - name: Pro
+        ref: "conventional-commit"
+  - name: Learn More
     sub:
       - name: Merge
-        ref: "/merge"
+        ref: "merge"
       - name: Squash
-        ref: "/squash"
+        ref: "squash"
       - name: Tag
-        ref: "/tag"
+        ref: "tag"
   - name: Semantic Versioning
-    ref: "/semantic-versioning"
+    ref: "semantic-versioning"

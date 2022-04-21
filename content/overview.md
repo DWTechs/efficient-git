@@ -1,8 +1,10 @@
 ---
-title: Overview
+title: Getting Started
 ---
 
-## Start a repo from scratch 
+## Create a repo
+
+Let's start manipulate Git by creating a Git repository.
 
 In any existing folder on your computer type :
 
