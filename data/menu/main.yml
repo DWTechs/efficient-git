@@ -4,6 +4,8 @@ main:
     sub:
       - name: Getting started
         ref: "/overview"
+      - name: basics
+        ref: "/teamwork"
       - name: Teamwork
         ref: "/teamwork"
   - name: Gitflow
