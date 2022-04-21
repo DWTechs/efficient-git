@@ -1,5 +1,7 @@
 ---
 main:
+  - name: What is Git
+    ref: "basics"
   - name: Usage
     sub:
       - name: Getting started
