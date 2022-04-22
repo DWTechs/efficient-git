@@ -1,113 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Efficient Git on Efficient-git</title>
-    <link>https://dwtechs.github.io/efficient-git/</link>
-    <description>Recent content in Efficient Git on Efficient-git</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://dwtechs.github.io/efficient-git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://dwtechs.github.io/efficient-git/conventional-commit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/conventional-commit/</guid>
-      <description>Following those rules bring great advantages to a project :
- Automatic CHANGELOGs. Automatic semantic version bump (based on the types of commits landed). Communicate the nature of changes to teammates, the public, and other stakeholders. Trigger build and publish processes. Make it easier for people to contribute to the project, by allowing them to explore a more structured commit history.  The message is structured as follows:
-&amp;lt;type&amp;gt;([optional scope]): &amp;lt;description&amp;gt;[optional body][optional footer] TypesThey are based on the Angular convention and must be one of the following:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dwtechs.github.io/efficient-git/gitflow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/gitflow/</guid>
-      <description>Gitflow is an alternative Git branching model that involves the use of feature branches and multiple primary branches. Compared to trunk-based development, Giflow has numerous, longer-lived branches and larger commits. Under this model, developers create a feature branch and delay merging it to the main trunk branch until the feature is complete. These long-lived feature branches require more collaboration to merge and have a higher risk of deviating from the trunk branch.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dwtechs.github.io/efficient-git/merge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/merge/</guid>
-      <description>Join two or more development histories together.
-DescriptionIncorporate changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
-Pre-merge checksBefore applying outside changes, you should get your own work in good shape and committed locally, so it will not be clobbered if there are conflicts (See also git-stash).</description>
-    </item>
-    
-    <item>
-      <title>Basics</title>
-      <link>https://dwtechs.github.io/efficient-git/basics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/basics/</guid>
-      <description>Starting from the trunkGit uses a lot of “tree” analogies. You can think of your main codebase as the trunk of a tree.
-Every time you add more changes (aka commits), your tree grows taller, straight up. Even if you delete code, that’s still considered a change and causes the tree to grow. It’s like how the “undo” history in a text editor saves your keystrokes, including backspace.</description>
-    </item>
-    
-    <item>
-      <title>Branches</title>
-      <link>https://dwtechs.github.io/efficient-git/branch/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/branch/</guid>
-      <description>master: For production releases. develop: For next release development. Available branch prefixes for developers :  feature: For new feature to develop. release: When release cycle is over. Features ready to ship are kept here. Freeing develop branch for next cycle. bugfix: For new bug to fix. hotfix: For production bug to fix ASAP on master branch. refactor: To improve or update code and structure. doc: To improve or update developer documentation.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started</title>
-      <link>https://dwtechs.github.io/efficient-git/overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/overview/</guid>
-      <description>Create a repoLet&amp;rsquo;s start manipulate Git by creating a Git repository.
-In any existing folder on your computer type :
-git init This will create a hidden .git folder inside your current folder — this is the &amp;ldquo;repository&amp;rdquo; (or repo) where git stores all of its internal tracking data. Any changes you make to any files within the original folder will now be possible to track.</description>
-    </item>
-    
-    <item>
-      <title>Semantic Versioning</title>
-      <link>https://dwtechs.github.io/efficient-git/semantic-versioning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/semantic-versioning/</guid>
-      <description>Given a version number MAJOR.MINOR.PATCH, increment the:
- MAJOR version when you make incompatible API changes, MINOR version when you add functionality in a backwards compatible manner, PATCH version when you make backwards compatible bug fixes.  Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
-IntroductionThe bigger a system grows and the more packages integrated into a software, the more we need a solid versioning process.</description>
-    </item>
-    
-    <item>
-      <title>Squash</title>
-      <link>https://dwtechs.github.io/efficient-git/squash/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/squash/</guid>
-      <description>What is Git SquashingSquashing in Git is the process of merging several commits into one.
-Why would I want to squash my commitsOften when we are working on a feature / bug fix / refactor etc we may find ourselves making several interim commits over the duration of the work, if we push back to our main branch then all those individual commits will be preserved.</description>
-    </item>
-    
-    <item>
-      <title>tag</title>
-      <link>https://dwtechs.github.io/efficient-git/tag/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/tag/</guid>
-      <description>Git has the ability to tag specific points in a repository’s history as being important. It is used to mark release points (v1.0, v2.0 and so on).
-Listing Your Tagsgit tag This command lists the tags in alphabetical order; the order in which they are displayed has no real importance.
-You can also search for tags that match a particular pattern. The Git source repo, for instance, contains more than 500 tags.</description>
-    </item>
-    
-    <item>
-      <title>Teamwork</title>
-      <link>https://dwtechs.github.io/efficient-git/teamwork/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwtechs.github.io/efficient-git/teamwork/</guid>
-      <description>Submitting your changesNow you have your changes on a branch, but the eventual goal is to get them back onto the trunk as part of the “official” codebase.
-Once you’ve tested your changes, you’ll need to share them with the team. Typically you’ll do this via a pull request (PR) or a merge request (MR) — they’re the same thing, the term just depends on what software you’re using (e.</description>
-    </item>
-    
-  </channel>
-</rss>
