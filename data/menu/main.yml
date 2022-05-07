@@ -1,15 +1,15 @@
 ---
 main:
   - name: What is Git
-    ref: "basics"
+    ref: "intro"
   - name: Usage
     sub:
       - name: Getting started
         ref: "overview"
-      - name: basics
-        ref: "basics"
       - name: Teamwork
         ref: "teamwork"
+      - name: Merge requests
+        ref: "merge-request"
   - name: Gitflow
     sub:
       - name: Getting started

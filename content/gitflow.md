@@ -19,6 +19,6 @@ The overall flow is as follow :
 - When a feature is complete it is merged into the develop branch.
 - When the release branch is done it is merged into develop then master on release date.
 - If an issue in master is detected a hotfix branch is created from master.
-- Once the hotfix is complete it is merged to both develop and master.
+- Once the hotfix is complete it is merged to both master and develop.
 
 ![Gitflow](../img/gitflow.png "Gitflow chart")
