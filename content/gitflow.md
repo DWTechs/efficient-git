@@ -21,4 +21,4 @@ The overall flow is as follow :
 - If an issue in master is detected a hotfix branch is created from master.
 - Once the hotfix is complete it is merged to both develop and master.
 
-![Gitflow](/assets/images/gitflow.png "Gitflow chart")
+![Gitflow](../img/gitflow.png "Gitflow chart")
