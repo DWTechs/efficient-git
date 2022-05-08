@@ -6,12 +6,10 @@ title: What is Git
 It makes it easier to track changes to files in a project.  
 You can determine exactly what changed, who changed it, and why.
 
-**It is mandatory for coordinating work among multiple people on a project**, and for tracking progress over time by saving “checkpoints”.  
-
-The core function of git is to save checkpoints (revisions) and share them with other people. Everything revolves around this concept.
+**The core function of git is to save checkpoints (revisions)** and share them with other people. Everything revolves around this concept.
 If you’ve ever created a checkpoint to something, you’ll be able to get back to it later as long as your .git folder is intact.
 
-So everything in git can be thought of as a checkpoint. Here’s a list of the types of checkpoint :
+**So everything in git can be thought of as a checkpoint**. Here’s a list of the types of checkpoint :
 
 ```
 HEAD
@@ -19,6 +17,9 @@ HEAD
 <commit-hash>, e.g. e093542d01d11c917c316bfaffd6c4e5633aba58 (or e093542 for short)
 <tag-name>, e.g. v1.0.0
 ```
+
+**It is mandatory for coordinating work among multiple people on a project**, and for tracking progress over time by saving “checkpoints”.  
+
 
 ## Starting from the trunk
 
