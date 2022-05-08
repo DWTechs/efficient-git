@@ -47,6 +47,10 @@ You can think of this like creating a local “checkpoint” (technically called
 
 *Commits are also checkpoints called a revision. The name will be a random-looking hash of numbers and letters such as e093542. This hash can then be used in various other commands just like branch names.*
 
+When working on a project, every time you start a new feature or bug fix, you create a new branch from develop, release or master/main. Depending on the work you have to do and the moment in the sprint.
+
+For more info about creating branches please refer to [Gitflow/branch](../branch).
+
 
 ## Check out a branch
 
