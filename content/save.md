@@ -19,14 +19,20 @@ And every morning when you start your day in order to recover your work as you l
 You are leaving for the day. Time to backup your work in case your computer does not start tomorrow morning.
 
 ```bash
+git status
+git add .
 git commit -m "WIP"
+git push
 ```
 
 ## retrieve your backup
 
-the day after you want to retrieve the same state as before.
+The day after you want to retrieve the same state as before.
 For this you can reset the commit
 
 ```bash
-git reset
+git rebase -i HEAD~2
 ```
+...
+
+Now your backup commit is deleted from remote and local repositories. You can start your day.
