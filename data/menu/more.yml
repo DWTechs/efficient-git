@@ -4,7 +4,7 @@ more:
     ref: "/#"
     icon: "gdoc_notification"
   - name: Releases
-    ref: "https://github.com/thegeeklab/hugo-geekdoc/releases"
+    ref: "/#"
     external: true
     icon: "gdoc_download"
   - name: "View Source"
