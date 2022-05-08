@@ -21,9 +21,10 @@ git tag -l "v1.8.5*"
 
 ## Create annotated Tags
 
-You can use Gitlab graphics interface to create a tag.
+You can use Github or Gitlab graphics interface to create a tag.
 
-Annotated tags are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). It’s generally recommended that you create annotated tags so you can have all this information; but if you want a temporary tag or for some reason don’t want to keep the other information, lightweight tags are available too.
+Annotated tags are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG).
+
 
 ```bash
 git tag -a v1.4 -m "my version 1.4 is cool"
@@ -44,3 +45,12 @@ git checkout v2.0.0
 ```
 
 Once a versioned package has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released as a new version.
+
+## Release a new version of master
+
+In the Gitflow process you want to tag master/main branch anytime you merge something into it.
+
+So when release branch or a hotfix branch is merged into master, tagging master should be part of the process.
+
+You can read [the Semantic versioning page ](../semantic-versioning) to learn mor about how to tag the branch properly using the version number.
+

@@ -8,8 +8,6 @@ main:
         ref: "overview"
       - name: Teamwork
         ref: "teamwork"
-      - name: Merge requests
-        ref: "merge-request"
   - name: Gitflow
     sub:
       - name: Getting started

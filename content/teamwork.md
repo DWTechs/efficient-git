@@ -10,6 +10,8 @@ It is time to get them back onto the trunk as part of the “official” codebas
 
 **Once you’ve tested your changes**, you’ll do this via a pull request (PR) or a merge request (MR) — they’re the same thing, the term just depends on what software you’re using (e.g. GitHub/Bitbucket/GitLab). You’re requesting that your changes be pulled in and merged.
 
+A merge request is done via the application used in the project : Github or Gitlab
+
 Your team will be happy to receive new PRs, even if the code needs a bit of work before being accepted. PRs are an important part of the open-source ecosystem.
 
 The main thing to remember is to include a clear explanation of why you’re making the changes in order to give context.

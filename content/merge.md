@@ -6,7 +6,7 @@ Join two or more development histories together.
 
 ## Description
 
-Incorporate changes since the time their histories diverged from the current branch into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
+Incorporate changes since the time their histories diverged from your branch into the main branch. This command is actually used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
 
 ## Pre-merge checks
 
@@ -30,6 +30,7 @@ You can work through the conflict by looking at the diffs.
 
 Git diff will show a three-way diff, highlighting changes from both the HEAD and MERGE_HEAD versions.
 
+You can learn more about resolving conflict in the [Teamwork page](../teamwork)
 
 ## How to merge
 

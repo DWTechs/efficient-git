@@ -2,9 +2,9 @@
 
 ---
 
-Following those rules bring great advantages to a project :
+Following those rules to write your commit messages will bring great advantages to a project :
 
-- Automatic CHANGELOGs.
+- Automatic CHANGELOGs capability.
 - Automatic semantic version bump (based on the types of commits landed).
 - Communicate the nature of changes to teammates, the public, and other stakeholders.
 - Trigger build and publish processes.
