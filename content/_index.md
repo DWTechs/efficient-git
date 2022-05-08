@@ -1,5 +1,5 @@
 ---
-title: Efficient Git
+title: Use Git without hassle
 geekdocNav: false
 geekdocBreadcrumb: false
 ---
