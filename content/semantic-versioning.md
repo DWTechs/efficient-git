@@ -2,6 +2,11 @@
 title: Semantic Versioning
 ---
 
+Semantic versioning is not exactly a Git topic.
+But since you will need to bump the version of the application after each release and tag the master branch, you need to learn how to properly update it following the **Semantic versioning principles**.
+
+## Overview
+
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
 - **MAJOR** version when you make incompatible API changes,
