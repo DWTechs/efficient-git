@@ -11,7 +11,5 @@ But if you and/or your team are not using it properly, Git can be a massive wast
 This guide will teach you **how to Git efficiently**. The simple and most useful way.
 In order to make Git as effortless as possible in your daily work and focus on development of applications.
 
-![Gitflow](./img/gitflow.png "Gitflow chart")
-
 {{< button relref="/intro" size="large" >}}Getting Started{{< /button >}}
 
