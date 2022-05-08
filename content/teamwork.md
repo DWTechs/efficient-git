@@ -66,3 +66,14 @@ After manually merging the conflicting lines together — keeping both the �
 Once all of the PR comments have been addressed and any conflicts have been resolved, your branch is ready to be merged!
 
 An administrator of the codebase can accept the PR by merging your branch into the trunk — simply by pressing a button on GitHub/Gitliab — thus making your changes official.
+
+## Squash merge
+
+Squash merging is a merge option that allows you to condense the Git history of topic branches when you complete a pull request. Instead of each commit on the topic branch being added to the history of the default branch, a squash merge adds all the file changes to a single new commit on the default branch.
+
+When you merge using Gitlab or Github there is a checkbox to squash all the commits into one. It is highly recommanded to use it in order to keep a clean history on the default branch.
+
+A simple way to think about this is that squash merge gives you just the file changes, and a regular merge gives you the file changes and the commit history.
+
+When squash merging, it's a good practice to delete the source branch. Deleting the source branch prevents confusion as the topic branch itself doesn't have a commit merging it into the default branch.
+

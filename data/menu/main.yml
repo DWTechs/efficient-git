@@ -20,8 +20,6 @@ main:
     sub:
       - name: Merge
         ref: "merge"
-      - name: Squash
-        ref: "squash"
       - name: Tag
         ref: "tag"
   - name: Semantic Versioning
