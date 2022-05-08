@@ -3,8 +3,30 @@ title: Save
 ---
 
 Git is not meant to be used as a backup device.
-But let's be pragmatic here as not every company has a proper way to backup developers work every day.
-As said before the core function of Git is to save checkpoints. And it has all the tools to recover from it very easily.
-Meaning that if use properly Git is a poweful backup application for developers.
 
-## to be continued
+But let's be pragmatic here as not every company has a proper way of backuping developers work every day.
+
+As said before the core function of Git is to save checkpoints. And it has all the tools to recover from it very easily.
+Meaning that, if used properly, Git is a poweful backup application for developers and can save you from losing several days of work.
+
+## Overview
+
+This backup routine should be done every evening when you leave work.
+And every morning when you start your day in order to recover your work as you left it the day before. 
+
+## Save your work
+
+You are leaving for the day. Time to backup your work in case your computer does not start tomorrow morning.
+
+```bash
+git commit -m "WIP"
+```
+
+## retrieve your backup
+
+the day after you want to retrieve the same state as before.
+For this you can reset the commit
+
+```bash
+git reset
+```
