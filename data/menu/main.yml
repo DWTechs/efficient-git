@@ -22,5 +22,7 @@ main:
         ref: "merge"
       - name: Tag
         ref: "tag"
+      - name: Wip
+        ref: "wip"
   - name: Semantic Versioning
     ref: "semantic-versioning"
