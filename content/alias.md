@@ -57,14 +57,12 @@ last= log -1 HEAD --stat
 conf= config --global -l
 ```
 
-Now you can commit faster : 
+Now you can commit like a pro : 
 
 ```bash
-git c "<conventional commit message>"
-```
-
-or stage all files to commit : 
-
-```bash
+git pl
+git s
 git a .
+git c "<conventional commit message>"
+git ph
 ```
