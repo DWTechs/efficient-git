@@ -24,7 +24,7 @@ main:
         ref: "merge"
       - name: Tag
         ref: "tag"
-      - name: Wip
-        ref: "wip"
+      - name: Alias
+        ref: "alias"
   - name: Semantic Versioning
     ref: "semantic-versioning"
