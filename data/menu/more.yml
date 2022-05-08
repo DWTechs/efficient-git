@@ -3,10 +3,14 @@ more:
   - name: News
     ref: "/#"
     icon: "gdoc_notification"
-  - name: Releases
+  - name: Efficient Javascript
     ref: "/#"
     external: true
-    icon: "gdoc_download"
+    icon: "gdoc_star"
+  - name: Efficient Angular
+    ref: "/#"
+    external: true
+    icon: "gdoc_star"
   - name: "View Source"
     ref: "https://github.com/DWTechs/efficient-git"
     external: true

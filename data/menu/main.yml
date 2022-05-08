@@ -6,11 +6,11 @@ main:
     sub:
       - name: Getting started
         ref: "overview"
-      - name: Teamwork
+      - name: Work with a team
         ref: "teamwork"
   - name: Gitflow
     sub:
-      - name: Getting started
+      - name: Overview
         ref: "gitflow"
       - name: Branches
         ref: "branch"
