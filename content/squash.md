@@ -2,7 +2,7 @@
 title: Squash  
 ---
 
-## What is Git Squashing
+## What is Git Squash
 
 Squashing in Git is the process of merging several commits into one. 
 
@@ -12,7 +12,7 @@ Often when we are working on a feature / bug fix / refactor etc, we may find our
 
 ## How do I Squash my commits
 
-Git does not have a specific command to squash commits instead we make use of existing git commands to achieve a squash.
+Git does not have a specific command to squash commits instead we make use of existing git commands.
 
 ## git merge <branch> --squash
 
