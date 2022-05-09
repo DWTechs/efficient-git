@@ -1,18 +1,18 @@
 ---
 main:
   - name: What is Git
-    ref: "basics"
+    ref: "intro"
   - name: Usage
     sub:
       - name: Getting started
         ref: "overview"
-      - name: basics
-        ref: "basics"
-      - name: Teamwork
+      - name: Work with a team
         ref: "teamwork"
+      - name: Save
+        ref: "save"
   - name: Gitflow
     sub:
-      - name: Getting started
+      - name: Overview
         ref: "gitflow"
       - name: Branches
         ref: "branch"
@@ -22,9 +22,9 @@ main:
     sub:
       - name: Merge
         ref: "merge"
-      - name: Squash
-        ref: "squash"
       - name: Tag
         ref: "tag"
+      - name: Alias
+        ref: "alias"
   - name: Semantic Versioning
     ref: "semantic-versioning"

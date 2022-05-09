@@ -6,7 +6,7 @@ title: Getting Started
 
 Let's start manipulate Git by creating a Git repository.
 
-In any existing folder on your computer type :
+In a new folder on your computer type :
 
 ```bash
 git init
@@ -45,12 +45,11 @@ git branch <new-branch-name>
 
 You can think of this like creating a local “checkpoint” (technically called a reference) and giving it a name. It’s similar to doing File > Save as… in a text editor; the new branch that gets created is a reference to the current state of your repo. The branch name can then be used in various other commands as you’ll soon see.
 
-Similar to branching, more commonly you will save each checkpoint as you go along in the form of commits (see git commit below soon).
+*Commits are also checkpoints called a revision. The name will be a random-looking hash of numbers and letters such as e093542. This hash can then be used in various other commands just like branch names.*
 
-Commits are a particular type of checkpoint called a revision. The name will be a random-looking hash of numbers and letters such as e093542. This hash can then be used in various other commands just like branch names.
+When working on a project, every time you start a new feature or bug fix, you create a new branch from develop, release or master/main. Depending on the work you have to do and the moment in the sprint.
 
-That’s really the core function of git: To save checkpoints (revisions) and share them with other people. Everything revolves around this concept.
-If you’ve ever created a checkpoint to something, you’ll be able to get back to it later as long as your .git folder is intact.
+For more info about creating branches please refer to [Gitflow/branch](../branch).
 
 
 ## Check out a branch
@@ -61,9 +60,9 @@ git checkout <existing-branch-name>
 
 You can think of this like “resuming” from an existing checkpoint. All your files will be reset to whatever state they were in on that particular branch.
 
-Keep in mind that any changes in your working directory will be kept around. See git stash if you’re interested in a simple way to avoid headaches.
+Keep in mind that any changes in your working directory will be kept around. Preventing you to switch branche. See git stash if you’re interested in a simple way to avoid unwanted commits.
 
-You can use the -b flag as a shortcut to create a new branch and then check it out all in one step. This is quite common:
+You can use the -b flag as a shortcut if you want to create the new branch while check it out all in one step. This is quite common:
 
 ```bash
 git checkout -b <new-branch-name>
@@ -99,7 +98,13 @@ As a shortcut, you can use wildcards just like with any other terminal command. 
 git add README.md app/*.txt
 ```
 
-This will add the file README.md, as well as every file in the app folder that ends in .txt. Typically you can just type git add --all to add everything that’s changed.
+This will add the file README.md, as well as every file in the app folder that ends in .txt. 
+
+You can also add everything that’s changed like this : 
+
+```bash
+git add --all
+```
 
 ## Commit your staged changes
 
@@ -109,7 +114,7 @@ git commit
 
 This will open your default command-line text editor and ask you to type in a commit message. As soon as you save and quit, your commit will be saved locally.
 
-The commit message is important to help other people understand what was changed and why you changed it. There’s a brief guide [here](/git/gitflow/commit/) explaining how to write useful commit messages.
+The commit message is important to help other people understand what was changed and why you changed it. There’s a brief guide [here](/gitflow/conventional-commit/) explaining how to write useful commit messages.
 
 You can use the -m flag as a shortcut to write a message. For example:
 
@@ -120,23 +125,13 @@ git commit -m “Add a new feature”
 ## Push your branch on the server
 
 ```bash
-git push origin <branch-name>
+git push
 ```
 
 This will upload your branch to the remote named origin (remember, that’s the URL defined initially during clone).
 
 After a successful push, your teammates will then be able to pull your branch to view your commits (see git pull below).
 
-As a shortcut, you can type the word HEAD instead of branch-name to automatically use the branch you’re currently on. HEAD always refers to your latest checkpoint, that is, the latest commit on your current branch.
-
-As mentioned earlier, everything in git can be thought of as a checkpoint. Here’s a list of the types of checkpoint you know about now (again, these are technically called “references” and “revisions”):
-
-```
-HEAD
-<branch-name>, e.g. master
-<commit-hash>, e.g. e093542d01d11c917c316bfaffd6c4e5633aba58 (or e093542 for short)
-<tag-name>, e.g. v1.0.0
-```
 
 ## Fetch the latest info about a repo
 
@@ -156,24 +151,8 @@ git merge <other-branch-name>
 
 This will take all commits that exist on the other-branch-name branch and integrate them into your own current branch.
 
-This uses whatever branch data is stored locally, so make sure you’ve run git fetch first to download the latest info.
+This uses whatever branch data is stored locally, so make sure you’ve run git pull first to download the latest info.
 
-For example, if someone else adds a few commits to the master branch of origin, you can do the following to download their changes and update your own local master branch:
+You can use the pull command to both fetch and merge all in one step.
 
-```bash
-git checkout master      # Make sure you're on the right branch.
-git fetch                # Download any new info from origin.
-git merge origin/master  # Merge the 'origin/master' branch into your current branch.
-```
-
-The name origin/master here literally means the origin/master checkpoint on your computer. Git uses this notation to differentiate branches of the same name (e.g. master) located in different places (e.g. your own branches vs. origin's branches).
-
-As a shortcut, you can use the pull command to both fetch and merge all in one step. This is more common than merging manually like above:
-
-```bash
-git pull origin master
-```
-
-Here we separate the words origin and master (without a slash like above). We don't want to use the origin/master checkpoint on our own computer, because that's stored offline and is probably out of date. We instead want to fetch directly from the master branch of the remote endpoint called origin.
-
-For a deeper understanding of how merging works and how conflicts are resolved [see the merge docs](/git/merge/).
+For a deeper understanding of how merging works and how conflicts are resolved [see the merge docs](../merge/).

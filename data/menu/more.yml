@@ -1,13 +1,14 @@
 ---
 more:
-  - name: News
-    ref: "/#"
-    icon: "gdoc_notification"
-  - name: Releases
-    ref: "https://github.com/thegeeklab/hugo-geekdoc/releases"
-    external: true
-    icon: "gdoc_download"
   - name: "View Source"
     ref: "https://github.com/DWTechs/efficient-git"
     external: true
     icon: "gdoc_github"
+  - name: Efficient Javascript
+    ref: "/#"
+    external: true
+    icon: "gdoc_star"
+  - name: Efficient Angular
+    ref: "/#"
+    external: true
+    icon: "gdoc_star"
