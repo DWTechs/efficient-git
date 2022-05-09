@@ -25,14 +25,23 @@ git commit -m "WIP"
 git push
 ```
 
-## retrieve your backup
+## Retrieve your backup
 
-The day after you want to retrieve the same state as before.
-For this you can reset the commit
+The day after you want to retrieve the same state as ealier.
+For this you have to revert your backup commit.
+
+### Revert
 
 ```bash
-git rebase -i HEAD~2
+git revert HEAD
+git push
 ```
-...
 
-Now your backup commit is deleted from remote and local repositories. You can start your day.
+Now your backup commit is reverted in the remote and the local repositories. You can start your work as you left it.
+
+**This will create two commits for each backup**. One for the backup and one for the revert.
+So don't forget to squash your commits when your work is finished.
+
+## Finish your work
+
+Once your work is done. Commit as usual then create your merge request with the squash option checked.
