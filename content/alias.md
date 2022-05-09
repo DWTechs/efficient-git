@@ -39,7 +39,14 @@ All you have to do now is typing `git wip` in your terminal.
 git wip
 ```
 
-![gitwip](../img/gitwip.png "git wip example screenshot")
+Which should show you something like this: 
+
+```
+11 days ago         bugfix/undefined-recipe-title
+10 days ago         feature/edit-header-tags
+6 days ago          feature/new-app-icons
+2 days ago          test/authentication
+```
 
 
 ## More useful aliases
