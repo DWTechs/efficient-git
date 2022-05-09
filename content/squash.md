@@ -1,5 +1,5 @@
 ---
-title: squash
+title: Squash  
 ---
 
 ## What is Git Squashing
@@ -14,78 +14,53 @@ Often when we are working on a feature / bug fix / refactor etc, we may find our
 
 Git does not have a specific command to squash commits instead we make use of existing git commands to achieve a squash.
 
+## git merge <branch> --squash
 
-## rebase
+git merge <branch> --squash allows us to merge one branch into another and condensing the commit history on the branch we are merging. It does this by creating a new commit and adding our changes to this commit, but stops before making the actual commit leaving us to add the clean commit message.
 
-Using a hypothetical example the first step to squashing our commits is to issue a git log
+In the example below we have been given the task to create a "great-feature", so the first thing we do is checkout the code and create a new branch:
 
-as in 
-```bash
-git log
 ```
-this will show the commit history, we can narrow this down to the commits we have made by using the --committer followed by the persons name  e.g. 
-```bash
-git log --committer <username>
+git checkout -b feature/great-feature
 ```
-or with a date range 
-```bash
-git log --since 2022-04-21
+on checking the log we might see something like this ahead of creating our branch
+
+![initial log](../static/img/squash-initial-log.png)
+
+At some point we will have completed the work on "great-feature" and are ready to merge this back into the main development branch. 
+
+Ahead of doing this we want to get rid of the commit history we made whilst working on the branch so that our main development branch only registers a single commit for our feature and does not include all the interim commits we made whilst developing on the branch.
+
+![commit history](../static/img/squash-feature-log.png)
+
+to do this we first need to checkout the branch we want to merge into, in this case the "develop" branch
+
 ```
-
-![example output using git log](../git-log.png)
-
-In the above example we see 5 commits which are displayed in sequential order starting with the most recent. These commits contain various work in progress steps which have no real meaning in the context of our overall project, i.e. we are only interested in the final commit which is adding the new feature. Before we commit this branch back to origin we would like to get rid of all these interim commits and present one single clean commit representing the new feature we have added. As an added bonus this makes us look like a genius developer who built the feature at the first attempt.
-
-To do this we can issue the git rebase command 
-
-```bash
-git rebase -i <branch>
+git checkout develop
 ```
 
+to merge our changes from the feature/great-feature branch and squash the commit history we use
 
-Where n is the number of commits from and including the current head we want include in the rebase. (current head = 1)
-
-The -i switch says rebase using interactive mode, which gives us control over which commits to squash.
-
-We need to tell git which branch we are rebasing to, in the example below we will rebase back to the develop branch:
-
-```bash
-git rebase -i develop
+```
+git merge feature/great-feature --squash
 ```
 
-On issuing the command a "vi" editor will launch and show us the list of our commits with a command in front of each:
+The should merge our feature branch back into develop and squash our commit history. 
 
-![vi editor showing git rebase](../static/rebase-i.png)
+At this stage it is important to note git has not committed this merge for us, we must do this adding a final commit message that we want to remain in out develop branch history. This message should represent the feature we have just worked on:
 
-We can now choose which commits to keep (pick) and which commits to squash, **with the exception of the first commit** which we have to keep, as we need one commit to squash everything to.
-
-We can now edit the text and choose which commits to keep aside from the first and which to squash.
-
-![editor with selected commits](../static/rebase-selection.png)
-
-In the example above we have chosen to squash the last four commits, and used the reword "r" command on the first commit to change the commit message to something more meaningful for our commit history, whilst retaining the actual commit.
-
-Once we have made the selection we can save and exit the editor <:wq>.
-
-Git will reopen the editor again this time showing the final commit message. We should check this and remove any content we do not want in our final commit, sometimes we will see the history of commit messages, these can be removed.
-
-Save and quit the editor, git will now perform the rebase and once complete if we issue the git log command again our branch should only have the one commit:
-
-![clean log](../static/rebase-resulting-log.png)
-
-At this point we can now push our branch back to our branch in our case "feature/amazing-feature" and raise a pull request- to merge into develop.
-
-```bash
-git push origin -u feature/amazing-feature
+```
+git commit -m"feature/great-feature" 
 ```
 
-{{< hint danger >}}
-**Note:** rebasing should only be done on your local branch and never against the remote branch unless you truly understand what you are doing.
-{{</hint>}}
+at the end of this process our log might look like this:
 
-Aside from rebasing to a branch we can also rebase to the current HEAD using
+![final log](../static/img/squash-develop-log.png)
 
-```bash
-git rebase -i HEAD~<n>
-```
-This allows us to perform a rebase at any stage allowing us to keep our local commit tree clean, but should be used with caution as we will not be able to revert back to a previous commit if it has been squashed.
+Note our feature branch will still retain the git history for that branch until such time as we delete the branch
+
+![git graph](../static/img/squash-graph.png)
+
+
+and our develop branch maintains a clean history.
+
