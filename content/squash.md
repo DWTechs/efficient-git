@@ -16,51 +16,100 @@ Git does not have a specific command to squash commits instead we make use of ex
 
 ## git merge <branch> --squash
 
-git merge <branch> --squash allows us to merge one branch into another and condensing the commit history on the branch we are merging. It does this by creating a new commit and adding our changes to this commit, but stops before making the actual commit leaving us to add the clean commit message.
+"git merge <branch> --squash" allows us to merge one branch into another whilst condensing the commit history on the branch we are merging. It does this by creating a new commit and adding our changes to this commit, but stops before making the actual commit leaving us to add the clean commit message.
 
-In the example below we have been given the task to create a "great-feature", so the first thing we do is checkout the code and create a new branch:
+The following example assumes you have the ability to merge into develop and push this change back to the develop branch. In practice and on many projects pushing directly to any of the "main" application branches will be blocked and in these cases the merge squash feature should be used in tools like github and gitlab.
+
+In the following example we have been given the task to create a "fab-feature" and so the first thing we might do is create our new branch assuming we already have pulled recent changes from the main repo.
 
 ```
-git checkout -b feature/great-feature
+git checkout -b feature/fab-feature
 ```
-on checking the log we might see something like this ahead of creating our branch
+on checking the log we might see something like this
 
-![initial log](../static/img/squash-initial-log.png)
 
-At some point we will have completed the work on "great-feature" and are ready to merge this back into the main development branch. 
+```
+git log
+commit 2ff6bd (HEAD -> /fab-feature)
 
-Ahead of doing this we want to get rid of the commit history we made whilst working on the branch so that our main development branch only registers a single commit for our feature and does not include all the interim commits we made whilst developing on the branch.
+  feature/fab-feature
 
-![commit history](../static/img/squash-feature-log.png)
+commit 905F7D
 
-to do this we first need to checkout the branch we want to merge into, in this case the "develop" branch
+  feature/great-feature
+
+commit 0DE673 (origin/develop)
+  
+  intial commit
+
+```
+
+We would then start work on Fab-feature, at some point we will have completed the work and are ready to merge back to our main branch in this case "develop", however during the development we made several interim commits.
+
+To keep the develop branch clean we want to get rid of the commit history and register a single commit comment which makes it clear for other people what this commit related to.
+
+Our commit history on our fab-feature branch might look something like this.
+
+```
+git log
+commit 5ef6bd (HEAD -> feature/fab-feature)
+
+  implemented fab feature
+
+commit c675F7D
+
+ adding tests for fab feature
+
+commit 98DE673
+  
+  working on fab feature
+
+commit 65EF5F
+
+  started work on fab feature
+
+```
+
+To squash these commits we first need to checkout the branch we want to merge into, in this case the "develop" branch
 
 ```
 git checkout develop
 ```
 
-to merge our changes from the feature/great-feature branch and squash the commit history we use
+to merge our changes from the feature/fab-feature branch and squash the commit history we use
 
 ```
-git merge feature/great-feature --squash
+git merge feature/fab-feature --squash
 ```
 
-The should merge our feature branch back into develop and squash our commit history. 
+This should merge our feature branch back into develop and squash our commit history. 
 
 At this stage it is important to note git has not committed this merge for us, we must do this adding a final commit message that we want to remain in out develop branch history. This message should represent the feature we have just worked on:
 
 ```
-git commit -m"feature/great-feature" 
+git commit -m "feature/fab-feature" 
 ```
 
-at the end of this process our log might look like this:
+at the end of this process our log would look like this:
 
-![final log](../static/img/squash-develop-log.png)
+```
+git log
+commit 2ff6bd (HEAD -> develop)
 
-Note our feature branch will still retain the git history for that branch until such time as we delete the branch
+  feature/fab-feature
 
-![git graph](../static/img/squash-graph.png)
+commit 905F7D
 
+  feature/great-feature
 
-and our develop branch maintains a clean history.
+commit 0DE673 (origin/develop)
+  
+  intial commit
 
+```
+
+Note our feature branch will still retain the git history for that branch until such time as we delete the branch.
+
+In the graph below looking at the main develop branch in blue we can see four blue nodes showing the clean history and our magenta branches with the interim commits.
+
+![git graph](../img/squash-graph.jpg "git branches")
