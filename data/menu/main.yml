@@ -26,5 +26,7 @@ main:
         ref: "tag"
       - name: Alias
         ref: "alias"
+      - name: Squash
+        ref: "squash"
   - name: Semantic Versioning
     ref: "semantic-versioning"
