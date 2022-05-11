@@ -19,7 +19,7 @@ Git does not have a specific command to squash commits instead we make use of ex
 "git merge <branch> --squash" allows us to merge one branch into another whilst condensing the commit history on the branch we are merging. It does this by creating a new commit and adding our changes to this commit, but stops before making the actual commit leaving us to add the clean commit message.
 
 The following example assumes you have the ability to merge into develop and push this change back to the develop branch. In practice and on many projects pushing directly to any of the "main" application branches will be blocked and in these cases the merge squash feature should be used in tools like github and gitlab.
-You can [read more about squashing](./teamwork/#squash-merge) using Github or Gitlab.
+You can [read more about squashing](../teamwork/#squash-merge) using Github or Gitlab.
 
 In the following example we have been given the task to create a "fab-feature" and so the first thing we might do is create our new branch assuming we already have pulled recent changes from the main repo.
 
