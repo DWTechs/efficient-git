@@ -5,10 +5,10 @@ more:
     external: true
     icon: "gdoc_github"
   - name: Efficient Javascript
-    ref: "/#"
+    ref: "/efficient-git/"
     external: true
     icon: "gdoc_star"
   - name: Efficient Angular
-    ref: "/#"
+    ref: "/efficient-git/"
     external: true
     icon: "gdoc_star"

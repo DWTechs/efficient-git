@@ -8,7 +8,7 @@ Squashing in Git is the process of merging several commits into one.
 
 ## Why would I want to squash my commits
 
-Often when we are working on a feature / bug fix / refactor etc, we may find ourselves making several interim commits over the duration of the change. Whilst we can push back to our main branch including all of these commits this creates noise in the commit history potentially making it harder to identify the actual commit we are interested in.
+Often when we are working on a feature / bug fix / refactor etc, we may find ourselves making several interim commits over the duration of the change. Whilst we can push back to our main branch including all of these commits, this creates noise in the commit history potentially making it harder to identify the actual commit we are interested in.
 
 ## How do I Squash my commits
 
@@ -19,14 +19,15 @@ Git does not have a specific command to squash commits instead we make use of ex
 "git merge <branch> --squash" allows us to merge one branch into another whilst condensing the commit history on the branch we are merging. It does this by creating a new commit and adding our changes to this commit, but stops before making the actual commit leaving us to add the clean commit message.
 
 The following example assumes you have the ability to merge into develop and push this change back to the develop branch. In practice and on many projects pushing directly to any of the "main" application branches will be blocked and in these cases the merge squash feature should be used in tools like github and gitlab.
+You can [read more about squashing](./teamwork/#squash-merge) using Github or Gitlab.
 
 In the following example we have been given the task to create a "fab-feature" and so the first thing we might do is create our new branch assuming we already have pulled recent changes from the main repo.
 
 ```
 git checkout -b feature/fab-feature
 ```
-on checking the log we might see something like this
 
+on checking the log we might see something like this
 
 ```
 git log
@@ -84,7 +85,7 @@ git merge feature/fab-feature --squash
 
 This should merge our feature branch back into develop and squash our commit history. 
 
-At this stage it is important to note git has not committed this merge for us, we must do this adding a final commit message that we want to remain in out develop branch history. This message should represent the feature we have just worked on:
+At this stage it is important to note git has not committed this merge for us, we must do this by adding a final commit message that we want to remain in develop branch history. This message should represent the feature we have just worked on:
 
 ```
 git commit -m "feature/fab-feature" 
@@ -108,8 +109,4 @@ commit 0DE673 (origin/develop)
 
 ```
 
-Note our feature branch will still retain the git history for that branch until such time as we delete the branch.
-
-In the graph below looking at the main develop branch in blue we can see four blue nodes showing the clean history and our magenta branches with the interim commits.
-
-![git graph](../img/squash-graph.jpg "git branches")
+Note our feature branch will still retain the git history for that branch until we delete the branch.
