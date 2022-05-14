@@ -37,7 +37,7 @@ If your computer died during the night and is not starting up anymore, you can p
 But hopefully, most of the time, you will not have any issue during the night, the next morning you just need to reset your commit on your local branch:
 
 ```bash
-git reset --soft HEAD~1
+git reset HEAD~1
 ```
 
 Now your backup commit is reset in the local repository. You can start your work as you left it.
@@ -55,6 +55,7 @@ git add .
 git commit -m "WIP"
 git push --force
 ```
+tedfest
 
 At this point "git push" cannot work because the remote is ahead of the local repository by 1 commit. Which is the backup commit you did yesterday.
 
