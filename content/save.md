@@ -14,9 +14,11 @@ Meaning that, if used properly, Git is a poweful backup application for develope
 This backup routine should be done every evening when you leave work.
 And every morning when you start your day in order to recover your work as you left it the day before. 
 
-## Save your work
+
+## Step 1: Save your work
 
 You are leaving for the day. Time to backup your work in case your computer does not start tomorrow morning.
+This commands only work if it is the first time you are saving your work on this branch. If it is not the case please jump to step three.
 
 ```bash
 git status
@@ -25,30 +27,40 @@ git commit -m "WIP"
 git push
 ```
 
-## Retrieve your backup
+## Step 2: Retrieve your backup
 
 The day after you want to retrieve the same state as ealier.
-For this you have to revert your backup commit.
+For this you have to reset your backup commit.
 
-### Reset
+If your computer died during the night and is not starting up anymore, you can pull your save to another computer and work as nothing happened.
 
-If you did not have any issue during the night, the next morning you just need to reset your commit on your local branch
+But hopefully, most of the time, you will not have any issue during the night, the next morning you just need to reset your commit on your local branch:
 
 ```bash
 git reset --soft HEAD~1
-git stash
-git pull
-git stash apply
 ```
 
 Now your backup commit is reset in the local repository. You can start your work as you left it.
+Keep in mind the remote did not reset so your local repository is late by one commit.
 
-If your computer died during the night and is not starting up anymore, you can pull your save from another computer and work as nothing happened.
 
+## Step 3: Save your work again after a previous backup
 
-**This will create two commits for each backup**. One for the backup and one for the revert.
-So don't forget to squash your commits when your work is finished.
+This is the end of the second day working on this feature.
+You want to backup again before leaving for the day : 
+
+```bash
+git status
+git add .
+git commit -m "WIP"
+git push --force
+```
+
+At this point "git push" cannot work because the remote is ahead of the local repository by 1 commit. Which is the backup commit you did yesterday.
+
+<!-- **This will create two commits for each backup**. One for the backup and one for the revert.
+So don't forget to squash your commits when your work is finished. -->
 
 ## Finish your work
 
-Once your work is done. Commit as usual then create your merge request with the squash option checked.
+Once this feature is done. Commit as usual then create your merge request with the squash option checked.
