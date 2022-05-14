@@ -50,12 +50,14 @@ This is the end of the second day working on this feature.
 You want to backup again before leaving for the day : 
 
 ```bash
+git pull 
 git status
 git add .
 git commit -m "WIP"
-git push --force
+git push 
 ```
-tedfest
+
+git pull may generate conflicts as your local branch diverged from remote. fix them using the current state as this is the work you made lately.
 
 At this point "git push" cannot work because the remote is ahead of the local repository by 1 commit. Which is the backup commit you did yesterday.
 
