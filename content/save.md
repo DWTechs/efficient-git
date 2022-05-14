@@ -55,7 +55,7 @@ git pull
 git stash apply
 ```
 
-git stash apply may generate conflicts as your local branch diverged from remote. fix them by "using the current" state as this is the work you have made lately. then continue with the usual commands.
+"git stash apply" may generate conflicts as your local branch diverged from remote in step 2. Fix them by "using the current" state as this is the work you have made lately. then continue with the usual commands.
 
 ```bash
 git status
@@ -63,8 +63,6 @@ git add .
 git commit -m "WIP"
 git push 
 ```
-
-At this point "git push" cannot work because the remote is ahead of the local repository by 1 commit. Which is the backup commit you did yesterday.
 
 <!-- **This will create two commits for each backup**. One for the backup and one for the revert.
 So don't forget to squash your commits when your work is finished. -->
