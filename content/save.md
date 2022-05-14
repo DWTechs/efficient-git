@@ -42,6 +42,10 @@ Now your backup commit is reset in the local repository. You can start your work
 
 If your computer died during the night and is not starting up anymore, you can pull your save from another computer and work as nothing happened.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b441e22288a136804138ab6e0caa921fa10e76c
 
 **This will create two commits for each backup**. One for the backup and one for the revert.
 So don't forget to squash your commits when your work is finished.
