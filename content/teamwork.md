@@ -2,8 +2,37 @@
 title: Teamwork
 ---
 
+## Commit yout work
 
-## Submitting your changes
+
+### Description
+
+A commit contains the current contents of the index and the given log message describing the changes.
+
+The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case HEAD is "detached").
+
+### When
+
+When you finish a sub task. 
+it is a good practice to commit several time in a day. every time it feels logicial to you. It helps keeping commits short, easy to understand and easy for you to describe in a commit message.
+It also helps create several checkpoints so in case of issue you have several moment you can go back to or read.
+
+The commit message is important to help other people understand what was changed and why you changed it. There’s a brief guide [here](/gitflow/conventional-commit/) explaining how to write useful commit messages.
+
+### How
+
+Usually you want to commit all your changes. If not you can add only the files you want to using "git add <file-name>".
+After your commit is done you can push it on the remote branch : 
+
+```bash
+git status
+git add .
+git commit -m "<conventional-commit-message>"
+git push
+```
+
+
+## Submit your changes
 
 After working on a new feature for the team you have your changes ready and tested on a branch.
 It is time to get them back onto the trunk as part of the “official” codebase.
@@ -16,13 +45,13 @@ Your team will be happy to receive new PRs, even if the code needs a bit of work
 
 The main thing to remember is to include a clear explanation of why you’re making the changes in order to give context.
 
-## Discussing and revising
+### Discussing and revising
 
 Once you submit your PR, someone else on the team will need to look it over and leave feedback. They can ask questions and comment on specific lines of code, or they can give more general feedback about your changes. In some cases they may push their own changes directly to your branch, but usually they’ll ask you to make the changes yourself.
 
 **If you want to make changes based on the feedback, simply add more commits to your existing branch and push it to origin again. The PR will update automatically to reflect your changes.**
 
-## Keeping up to date
+## Stay up to date
 
 If some time goes by before your PR is accepted, it might get “stale”, meaning it’s based on an older version of the trunk. Your changes may have worked a week ago, but there’s no guarantee that they still work alongside other, more recent changes to the trunk.
 
@@ -32,11 +61,13 @@ You are effectively just moving your branch up to the top of the trunk to stay u
 
 Some people may prefer "rebase" method; **it is safer and easier to merge.**
 
-## Dealing with conflicts
+## Deal with conflicts
 
 When merging, you will occasionally run into conflicts. This means you changed a line of code that someone else also changed, and git doesn’t know which version to keep.
 
-When this happens the output from git has weird >>>>>>> ======= <<<<<<< symbols.
+Note that this is a normal behaviour and you should not be afraid or annoyed by conflict. Fix them safely, and ask for help if you have doubts.
+
+When conflicts happens the output from git has weird >>>>>>> ======= <<<<<<< symbols.
 
 In essence, you just need to remove those weird symbols and manually combine the code in between them.
 
