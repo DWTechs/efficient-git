@@ -64,9 +64,8 @@ git commit -m "WIP"
 git push 
 ```
 
-<!-- **This will create two commits for each backup**. One for the backup and one for the revert.
-So don't forget to squash your commits when your work is finished. -->
+<**This will create a commit for each backup**. So don't forget to squash your commits when your work is finished.
 
 ## Finish your work
 
-Once this feature is done. Commit as usual then create your merge request with the squash option checked.
+Once this feature is done. Commit is following step 3 and create your merge request with the squash option checked.
