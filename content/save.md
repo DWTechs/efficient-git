@@ -75,7 +75,7 @@ git commit -m "WIP"
 git push 
 ```
 
-<**This will create a commit for each backup**. So don't forget to squash your commits when your work is finished.
+**This will create a commit for each backup**. So don't forget to squash your commits when your work is finished.
 
 ## Step 4: Finish your work
 
