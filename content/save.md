@@ -30,14 +30,19 @@ git push
 The day after you want to retrieve the same state as ealier.
 For this you have to revert your backup commit.
 
-### Revert
+### Reset
+
+If you did not have any issue during the night, the next morning you just need to reset your commit on your local branch
 
 ```bash
-git reset --soft HEAD
-git push
+git reset --soft HEAD~1
 ```
 
-Now your backup commit is reverted in the remote and the local repositories. You can start your work as you left it.
+Now your backup commit is reset in the local repository. You can start your work as you left it.
+
+If your computer died during the night and is not starting up anymore, you can pull your save from another computer and work as nothing happened.
+
+
 
 **This will create two commits for each backup**. One for the backup and one for the revert.
 So don't forget to squash your commits when your work is finished.
