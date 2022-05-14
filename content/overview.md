@@ -109,7 +109,7 @@ git add --all
 ## Commit your staged changes
 
 ```bash
-git commit
+git commit -m "<conventional-commit-message>"
 ```
 
 This will open your default command-line text editor and ask you to type in a commit message. As soon as you save and quit, your commit will be saved locally.
