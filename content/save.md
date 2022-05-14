@@ -55,6 +55,7 @@ git add .
 git commit -m "WIP"
 git push --force
 ```
+test
 
 At this point "git push" cannot work because the remote is ahead of the local repository by 1 commit. Which is the backup commit you did yesterday.
 
