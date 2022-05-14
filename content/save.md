@@ -33,7 +33,7 @@ For this you have to revert your backup commit.
 ### Revert
 
 ```bash
-reset --hard HEAD~1
+git reset --soft HEAD
 git push
 ```
 
