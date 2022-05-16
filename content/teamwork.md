@@ -2,7 +2,7 @@
 title: Teamwork
 ---
 
-## Commit yout work
+## Commit your work
 
 
 ### Description
