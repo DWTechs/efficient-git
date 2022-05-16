@@ -45,36 +45,21 @@ Hopefully, most of the time, you will not have any issue during the night. The n
 
 ```bash
 git reset HEAD~1
+git stash
+git pull 
+git revert HEAD
+git push
+git stash apply
 ```
 
 Now your backup commit is reset in the local repository. You can keep working on your branch as you left it.
-**Keep in mind the remote did not reset so your local repository is late by one commit.** Your backup is still on the remote if needed.
-
 
 ## Step 3: Save your work again after a previous backup
 
 This is the end of the second day working on this feature.
 You want to backup again before leaving for the day.
 
-As usual you start by pulling your remote branch to make sure you are up to date.
-But as said earlier your local branch has diverged in step 2. This is why you need to stash your work first in order to pull the remote.
-
-
-```bash
-git stash
-git pull 
-git stash apply
-```
-
-
-"git stash apply" may generate conflicts as your local branch diverged from remote in step 2. Fix them by "using the current" state as this is the work you have made lately. then continue with the usual commands.
-
-```bash
-git status
-git add .
-git commit -m "WIP"
-git push 
-```
+Repeat step 1.
 
 ## Step 4: Finish your work
 
