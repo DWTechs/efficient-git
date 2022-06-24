@@ -15,7 +15,7 @@ And every morning when you start your day in order to recover your work as you l
 
 Note that you only need to do this if your current work is sufficiently started since the last commit you have pushed and the current state is not mature enough for a proper intermediary conventional commit.
 
-**If you can commit properly just do it and push.** This is by far the simplest way to backup your work.
+**If you can commit properly just do it and push.** This is the simplest way to backup your work.
 
 ## Step 1: Save your work
 
@@ -41,15 +41,13 @@ For this you have to reset your backup commit.
 
 If your computer died during the night and is not starting up anymore, you can pull your save to another computer and work as if nothing happened. The backup saved you from starting from scratch again.
 
-Hopefully, most of the time, you will not have any issue during the night. The next morning you then need to reset your commit on your local branch:
+Hopefully, most of the time, you will not have any issue during the night. The next morning you then need to reset your commit on your local branch so you can keep seeing your modification in your IDE:
 
 ```bash
 git reset HEAD~1
 ```
-Now your backup commit is reset in the local repository. You can keep working on your branch as you left it.
-This also means your local branch diverged compared to the remote branch.
-You want to get your banches up to date while keeping your save on the remote just in case.
-To do so you need to pull the remote in order to revert it:
+Now your backup commit is reset in the local repository. This also means your local branch diverged compared to the remote branch.
+Thus you want to get your remote banch up to date. To do so you need to pull the remote in order to revert it:
 
 ```bash
 git stash
@@ -59,7 +57,7 @@ git push
 git stash apply
 ```
 
-Now your "WIP" commit is reverted in the remote branch but still exists in the remote if needed.
+Now your "WIP" commit is reverted in the remote branch head but still exists in the remote as an older commit if needed.
 
 ## Step 3: Save your work again after a previous backup
 
@@ -70,6 +68,4 @@ Repeat step 1.
 
 ## Step 4: Finish your work
 
-Once this feature is done. Commit is following step 3 and create your merge request with the squash option checked.
-
-These steps will create a commit for each backup. So don't forget to squash your commits when your work is finished.
+Once this feature is done. Commit following step 1 except for the commit message of course. Then create your merge request with the squash option checked because all these steps will create a commit for each backup.
