@@ -4,12 +4,16 @@ more:
     ref: "https://github.com/DWTechs/efficient-git"
     external: true
     icon: "gdoc_github"
+  - name: Efficient web app architecture
+    ref: "/efficient-web-app-architecture/"
+    external: true
+    icon: "gdoc_star"
   - name: Efficient Javascript
-    ref: "/efficient-git/"
+    ref: "/efficient-javascript/"
     external: true
     icon: "gdoc_star"
   - name: Efficient Angular
-    ref: "/efficient-git/"
+    ref: "/efficient-angular/"
     external: true
     icon: "gdoc_star"
   - name: Efficient Node
