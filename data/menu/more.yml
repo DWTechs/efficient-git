@@ -12,3 +12,7 @@ more:
     ref: "/efficient-git/"
     external: true
     icon: "gdoc_star"
+  - name: Efficient Node
+    ref: "/efficient-node/"
+    external: true
+    icon: "gdoc_star"
