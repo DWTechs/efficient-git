@@ -14,11 +14,11 @@ Simple rules to name groups, subgroups and repositories :
 
 ### Overview
 
-Existing folders : 
-- \<entity\>/project/ contains repositories for projects
-- \<entity\>/doc/ contains repositories for documentations
-- \<entity\>/template/ contains repositories for starter kits or configurations
-- \<entity\>/library/ contains repositories for reusable libraries
+Current folders : 
+- **\<entity\>/project/**: contains repositories for projects
+- **\<entity\>/doc/**: contains repositories for documentations
+- **\<entity\>/template/**: contains repositories for starter kits or configurations
+- **\<entity\>/library/**: contains repositories for reusable libraries
 
 ### Projects
 
@@ -33,6 +33,10 @@ The theme used is Hugo Geekdoc.
 
 The path for documentations is of the form \<entity\>/doc/\<topic\>
 
+Example : 
+- \<entity\>/doc/git/
+- \<entity\>/doc/angular/
+
 ### Templates
 
 Templates are reusable pieces of code that will help start a new project.
@@ -46,7 +50,7 @@ Possible types are :
 - **conf** for configurations
 
 Example : 
-- \<entity\>/template/Javascript/angular/starter/
+- \<entity\>/template/javascript/angular/starter/
 
 ### Libraries
 
