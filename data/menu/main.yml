@@ -33,4 +33,4 @@ main:
   - name: Gitlab
     sub:
       - name: Organization
-        ref: "organization"
+        ref: "gitlab/organization"
