@@ -30,3 +30,7 @@ main:
         ref: "squash"
   - name: Semantic Versioning
     ref: "semantic-versioning"
+  - name: Gitlab
+    sub:
+      - name: Organization
+        ref: "organization"
