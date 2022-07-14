@@ -28,8 +28,6 @@ main:
         ref: "alias"
       - name: Squash
         ref: "squash"
-      - name: Submodules
-        ref: "submodule"
   - name: Semantic Versioning
     ref: "semantic-versioning"
   - name: Gitlab
