@@ -61,9 +61,10 @@ The path for templates is of the form \<entity\>/template/\<family\>/\<framework
 - \<precision\> folders is optional and may not be used if not applicable. It allows to add a specificity to the template in case you need two or more templates for the same framework in the future. For example several starter kits for the same monolith framework with important strategic differences.
 - \<precision\> folder could be duplicated if more templates of the same parent folder are needed (ie: \<precision1\>/\<precision2\>...). The last level of \<precision\> will be a repository instead of a folder.
 
-Example for a web application starter kit based on microservices architecture: 
+Example with a starter kit for Docker based microservices web application stored in a mono-repository: 
 - \<entity\>/template/web/microservices/mono-repo
 
+Note we did not mentioned Docker in the path as all our web application templates are based on it.
 
 ### Libraries
 
