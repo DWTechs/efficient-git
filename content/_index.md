@@ -4,7 +4,6 @@ geekdocNav: false
 geekdocBreadcrumb: false
 ---
 
-
 ## Use Git without hassle
 
 Understanding how to use Git will give a major boost to your daily work. A very useful tool indeed; And like every tool, it has been created mostly to make you gain time.
