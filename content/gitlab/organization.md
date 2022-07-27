@@ -24,7 +24,6 @@ Current folders :
 
 The goal is to keep a readable folder structure for easy understanding and access.
 
-
 ### Projects
 
 Projects are applications.
@@ -51,7 +50,6 @@ Templates are reusable pieces of **architectures** that will help start a new pr
 For example it can be a starter kit for a given framework, configuration files for cloud computing, or a set of pre-developped services for a microservice architecture. 
 
 The path for templates is of the form \<entity\>/template/\<family\>/\<framework\>/\<precision\>
-
 
 - Possible \<family\>/ folders could be :
     - **web** for web applications
