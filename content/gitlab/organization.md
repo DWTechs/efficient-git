@@ -13,7 +13,6 @@ Simple rules to name groups, subgroups and repositories :
 
 ## Folders
 
-
 ### Overview
 
 Current folders : 
@@ -28,7 +27,7 @@ The goal is to keep a readable folder structure for easy understanding and acces
 
 Projects are applications.
 
-The path for projects is of the form \<entity\>/project/\<city\>/\<client\>/\<year\>/\<application\>
+The path for projects is of the form \<entity\>/project/\<city\>/\<client\>/\<application\>
 
 - Add a \<service\> folder at the end in case of mutli-repos application
 

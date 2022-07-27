@@ -15,3 +15,7 @@ hugo serve -D
 Docker compose : 
 ```bash
 $ docker-compose -f ./docker-compose.yml up -d
+```
+
+
+Visit http://localhost:1313/efficient-git/
