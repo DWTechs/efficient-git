@@ -1,9 +1,9 @@
 version: "3.8"
 services:
   hugo:
-    image: klakegg/hugo:0.101.0-alpine
+    image: klakegg/hugo:0.101.0-busybox
     volumes:
       - ".:/src"
     ports:
       - "1313:1313"
-    command: "serve -D"
+    command: "server"
