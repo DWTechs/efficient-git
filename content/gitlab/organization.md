@@ -29,8 +29,9 @@ The goal is to keep a readable folder structure for easy understanding and acces
 
 Projects are applications.
 
-The path for projects is of the form \<entity\>/project/\<city\>/\<client\>/\<application\>
+The path for projects is of the form \<entity\>/project/\<city\>/\<client\>/\<precision\>/\<application\>
 
+- \<precision\> folder could be duplicated if needed (ie: \<precision1\>/\<precision2\>...). It is useful to give more details about the client. For example big companies with several entities.
 - Add a \<service\> folder at the end in case of mutli-repos application
 
 
