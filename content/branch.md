@@ -38,6 +38,8 @@ Once it's ready to ship, the release branch gets merged into master and tagged w
 
 Using a dedicated branch to prepare releases makes it possible for one team to polish the current release while another team continues working on features for the next release. It also creates well-defined phases of development.
 
+The release version name must follow the [Semantic versionning rules](https://dwtechs.github.io/efficient-git/semantic-versioning/)
+
 ```bash
 git checkout develop
 git checkout -b release/0.1.0
