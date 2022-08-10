@@ -5,14 +5,11 @@ title: Branches
 - **master**: For production releases.
 - **develop**: For next release development.
 - Available branch prefixes for developers :
-  - **feature**: For new feature to develop.
+  - **feat**: For new feature to develop. Or anything else which not fit into other prefixes below. 
   - **release**: When release cycle is over. Features ready to ship are kept here. Freeing develop branch for next cycle.
-  - **bugfix**: For new bug to fix.
-  - **hotfix**: For production bug to fix ASAP on master branch.
-  - **refactor**: To improve or update code and structure.
+  - **fix**: For new bug to fix or hotfix required on master branch.
   - **doc**: To improve or update developer documentation.
   - **test**: To add or update unit tests or E2E tests.
-  - **build**: To improve the workflow of the project.
 
 ## Feature branch
 
@@ -26,7 +23,7 @@ When a feature is way behind develop because of a long development process, merg
 
 ```bash
 git checkout develop
-git checkout -b feature/#245/csv-export
+git checkout -b feat/#245/csv-export
 ```
 
 ## Release branch
@@ -56,7 +53,7 @@ When a bugfux is complete and tested, it gets merged back into develop. Bugfixes
 
 ```bash
 git checkout develop
-git checkout -b bugfix/#456/export-button-color
+git checkout -b fix/#456/export-button-color
 ```
 
 ## Hotfix branch
@@ -71,7 +68,7 @@ Having a dedicated line of development for bug fixes lets your team address issu
 
 ```bash
 git checkout master
-git checkout -b hotfix/#344/wrong-email-regex
+git checkout -b fix/#344/wrong-email-regex
 ```
 
 ## Refactor branch
@@ -86,7 +83,7 @@ When refactor is complete and tested, it gets merged back into develop. Tests ne
 
 ```bash
 git checkout develop
-git checkout -b refactor/#426/export-csv-class
+git checkout -b feat/#426/export-csv-class
 ```
 
 ## Doc branch
@@ -128,5 +125,5 @@ When build is complete and tested, it gets merged back into develop. Builds neve
 
 ```bash
 git checkout develop
-git checkout -b build/#514/gitbranchvalidator
+git checkout -b feat/#514/gitbranchvalidator
 ```
