@@ -26,7 +26,7 @@ When a feature is way behind develop because of a long development process, merg
 
 ```bash
 git checkout develop
-git checkout -b feature/csv-export
+git checkout -b feature/#245/csv-export
 ```
 
 ## Release branch
@@ -86,7 +86,7 @@ When refactor is complete and tested, it gets merged back into develop. Tests ne
 
 ```bash
 git checkout develop
-git checkout -b refactor/export-csv-class
+git checkout -b refactor/#426/export-csv-class
 ```
 
 ## Doc branch
@@ -102,7 +102,7 @@ When documentation is complete, it gets merged back into develop. Documentations
 
 ```bash
 git checkout develop
-git checkout -b doc/husky-pre-commit
+git checkout -b doc/#112/user-erd
 ```
 
 ## Test branch
@@ -115,7 +115,7 @@ When test is complete, it gets merged back into develop. Tests never interact di
 
 ```bash
 git checkout develop
-git checkout -b test/csv-export
+git checkout -b test/#821/csv-export
 ```
 
 ## Build branch
@@ -128,5 +128,5 @@ When build is complete and tested, it gets merged back into develop. Builds neve
 
 ```bash
 git checkout develop
-git checkout -b build/gitbranchvalidator
+git checkout -b build/#514/gitbranchvalidator
 ```
