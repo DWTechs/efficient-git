@@ -26,7 +26,7 @@ They are based on the [Angular convention](https://github.com/angular/angular/bl
 
 - **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 - **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-- **docs**: Documentation only changes
+- **doc**: Documentation only changes
 - **feat**: A new feature
 - **fix**: A bug fix
 - **perf**: A code change that improves performance
@@ -40,53 +40,26 @@ They are based on the [Angular convention](https://github.com/angular/angular/bl
 
 The scope should be the name of the updated component.
 
-### Subject
+### Description
 
-The subject contains a succinct description of the change:
+The description contains the ticket id and a succinct description of the change:
 
 - Use the imperative, present tense: "change" not "changed" nor "changes"
 - Don't capitalize the first letter
-- No dot (.) at the end
-
-### Body
-
-Just as in the subject, use the imperative, present tense: "change" not "changed" nor "changes". The body should include the motivation for the change and contrast this with previous behavior.
-
-### Footer
-
-The footer should contain any information about Breaking Changes and is also the place to reference GitHub issues that this commit Closes.
+- No dot use (.) at the end
 
 ### Rules
 
 A commit can contain the following structural elements :
 
 - **Fix:** Patches a bug in your codebase (this correlates with PATCH in semantic versioning).
-- **Feat:** Introduces a new feature to the codebase (this correlates with MINOR in semantic versioning).
+- **Feat:** Introduces a new feature to the codebase (this correlates with MINOR in semantic versioning, or MAJOR in case of a BTRAKING CHANGE).
 - **Additional types** are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE).
-- **BREAKING CHANGE:** A commit that has a footer "BREAKING CHANGE:" introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
-- **footers** other than "BREAKING CHANGE: <description>" may be provided and follow a convention similar to git trailer format.
-- **A scope** may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis (ex : feat(parser): add ability to parse arrays).
+- **BREAKING CHANGE:** A commit that has a "BREAKING:" introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
+- **A scope** gives additional contextual information and is contained within parenthesis.
 
 ```bash
-$ git commit -am "feat(lang): added polish language"
+git commit -m "feat(lang): [#346] added polish language"
+git commit -m "feat(parser): [#546] add ability to parse arrays"
+git commit -m 'feat(config): [neo-118] BREAKING: allow provided config object to extend other configs
 ```
-
-```bash
-$ git commit -am 'feat(config): allow provided config object to extend other configs
-BREAKING CHANGE: extends key in config file is now used for extending other config files'
-```
-
-### Wizard
-
-You can use npm and Commitizen to help you write conventional commit messages :
-
-```bash
-$ npm run commit
-```
-
-### Automation
-
-- [Husky](https://github.com/typicode/husky) :
-  Prevents bad git commit, git push with git hooks. It will stop you if your commit message is not valid.
-- [Commitizen](https://github.com/commitizen/cz-cli) :
-  Launch commitizen Wizard to commit your work. It will guide you to write good conventional commits easily.
