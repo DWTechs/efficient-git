@@ -55,11 +55,11 @@ A commit can contain the following structural elements :
 - **Fix:** Patches a bug in your codebase (this correlates with PATCH in semantic versioning).
 - **Feat:** Introduces a new feature to the codebase (this correlates with MINOR in semantic versioning, or MAJOR in case of a BTRAKING CHANGE).
 - **Additional types** are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE).
-- **BREAKING CHANGE:** A commit that has a "BREAKING:" introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
+- **BREAKING CHANGE:** A commit that has a "BREAKING!" introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
 - **A scope** gives additional contextual information and is contained within parenthesis.
 
 ```bash
 git commit -m "feat(lang): [#346] added polish language"
 git commit -m "feat(parser): [#546] add ability to parse arrays"
-git commit -m 'feat(config): [neo-118] BREAKING: allow provided config object to extend other configs
+git commit -m 'feat(config): [neo-118] BREAKING! allow provided config object to extend other configs
 ```
