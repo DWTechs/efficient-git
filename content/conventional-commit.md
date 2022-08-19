@@ -56,12 +56,12 @@ A succinct description of the change:
 - **fix:** Patches a bug in your codebase (this correlates with PATCH in semantic versioning).
 - **feat:** Introduces a new feature to the codebase (this correlates with MINOR in semantic versioning, or MAJOR in case of a BTRAKING CHANGE).
 - **Additional types:** are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE).
-- **Braking change:** A commit that has a "BREAKING!" in the description introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
+- **Breaking change:** A commit that start with "BREAKING!" in the description introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
 
 ### Examples
 
 ```bash
 git commit -m "feat(lang): [#346] add polish language"
 git commit -m "feat(parser): [#546] add ability to parse arrays"
-git commit -m 'feat(config): [neo-118] BREAKING! allow provided config object to extend other configs'
+git commit -m 'feat(config): [neo-118] BREAKING! allow provided config object to extend other configs
 ```
