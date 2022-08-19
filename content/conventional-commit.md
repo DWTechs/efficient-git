@@ -1,23 +1,22 @@
 ---
-
+title: Commits
 ---
+
+*This is a simplifed version of the original conventional commits.*
 
 Following those rules to write your commit messages will bring great advantages to a project :
 
 - Automatic CHANGELOGs capability.
 - Automatic semantic version bump (based on the types of commits landed).
-- Communicate the nature of changes to teammates, the public, and other stakeholders.
-- Trigger build and publish processes.
-- Make it easier for people to contribute to the project, by allowing them to explore a more structured commit history.
+- Readable nature of changes to teammates, the public, and other stakeholders.
+- Automatic trigger of build and publish processes.
+- Easier contribution to the project for new developers, by allowing them to explore a more structured commit history.
 
 The message is structured as follows:
 
 ```
-<type>([optional scope]): <description>
+<type>(<scope>): [<#ticket>] <description>
 
-[optional body]
-
-[optional footer]
 ```
 
 ### Types
@@ -40,26 +39,29 @@ They are based on the [Angular convention](https://github.com/angular/angular/bl
 
 The scope should be the name of the updated component.
 
+### #ticket
+
+The id of the ticket or issue you are working on in this commit.
+
 ### Description
 
-The description contains the ticket id and a succinct description of the change:
+A succinct description of the change:
 
 - Use the imperative, present tense: "change" not "changed" nor "changes"
-- Don't capitalize the first letter
-- No dot use (.) at the end
+- Don't capitalize letters
+- No dots (.)
 
-### Rules
+### Additional Rules
 
-A commit can contain the following structural elements :
+- **fix:** Patches a bug in your codebase (this correlates with PATCH in semantic versioning).
+- **feat:** Introduces a new feature to the codebase (this correlates with MINOR in semantic versioning, or MAJOR in case of a BTRAKING CHANGE).
+- **Additional types:** are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE).
+- **Braking change:** A commit that has a "BREAKING!" in the description introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
 
-- **Fix:** Patches a bug in your codebase (this correlates with PATCH in semantic versioning).
-- **Feat:** Introduces a new feature to the codebase (this correlates with MINOR in semantic versioning, or MAJOR in case of a BTRAKING CHANGE).
-- **Additional types** are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE).
-- **BREAKING CHANGE:** A commit that has a "BREAKING:" introduces a breaking API change (correlating with MAJOR in semantic versioning). A BREAKING CHANGE can be part of commits of any type.
-- **A scope** gives additional contextual information and is contained within parenthesis.
+### Examples
 
 ```bash
-git commit -m "feat(lang): [#346] added polish language"
+git commit -m "feat(lang): [#346] add polish language"
 git commit -m "feat(parser): [#546] add ability to parse arrays"
-git commit -m 'feat(config): [neo-118] BREAKING: allow provided config object to extend other configs
+git commit -m 'feat(config): [neo-118] BREAKING! allow provided config object to extend other configs'
 ```
