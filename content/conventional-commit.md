@@ -41,7 +41,7 @@ The scope should be the name of the updated component.
 
 ### #ticket
 
-The id of the ticket or issue you are working on in this commit.
+The id of the ticket you are working on in this commit. Each commit must link to a work item in your ticketing system.
 
 ### Description
 

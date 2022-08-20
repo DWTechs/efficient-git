@@ -2,7 +2,7 @@
 title: Branches
 ---
 
-- **master**: For production releases.
+- **master** | **main**: For production releases.
 - **develop**: For next release development.
 - Available branch prefixes for developers :
   - **feat**: For new feature to develop. Or anything else which not fit into other prefixes below. 
@@ -10,6 +10,8 @@ title: Branches
   - **fix**: For new bug to fix or hotfix required on master branch.
   - **doc**: To improve or update developer documentation.
   - **test**: To add or update unit tests or E2E tests.
+
+  Each branch must link to a work item in your ticketing system. Except for "release" which must link to a version of the application.
 
 ## Feature branch
 
