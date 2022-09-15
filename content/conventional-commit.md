@@ -63,5 +63,5 @@ A succinct description of the change:
 ```bash
 git commit -m "feat(lang): [#346] add polish language"
 git commit -m "feat(parser): [#546] add ability to parse arrays"
-git commit -m 'feat(config): [neo-118] BREAKING! allow provided config object to extend other configs
+git commit -m "feat(config): [neo-118] BREAKING! allow provided config object to extend other configs"
 ```
