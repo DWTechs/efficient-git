@@ -33,11 +33,13 @@ Add the following lines to the config file (if you already have an "[alias]" sec
 
 ## How to use it
 
+All you have to do now is typing `git wip` in your terminal:
+
 ```bash
 git wip
 ```
 
-Which should show you something like this: 
+Which should print something like this: 
 
 ```
 11 days ago         bugfix/undefined-recipe-title
