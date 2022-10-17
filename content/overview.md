@@ -4,8 +4,6 @@ title: Getting Started
 
 ## Create a repo
 
-Let's start manipulate Git by creating a Git repository.
-
 In a new folder on your computer type :
 
 ```bash
@@ -15,7 +13,7 @@ git init
 This will create a hidden .git folder inside your current folder — this is the "repository" (or repo) where git stores all of its internal tracking data.
 Any changes you make to any files within the original folder will now be possible to track.
 
-The original folder is now referred to as your working directory, as opposed to the repository (the .git folder) that tracks your changes. You work in the working directory. Simple!
+The original folder is now referred to as your **working directory**, as opposed to the repository (the .git folder) that tracks your changes. You work in the working directory.
 
 ## Clone an existing repo
 
@@ -25,17 +23,29 @@ git clone https://github.com/xxx/xxxx.git
 
 This will download a .git repository from the internet (GitHub) to your computer and extract the latest snapshot of the repo (all the files) to your working directory. By default it will all be saved in a folder with the same name as the repo.
 
-The URL you specify here is called the remote origin (the place where the files were originally downloaded from). This term will be used later on.
+The URL you specify here is called the **remote origin**. The place where the files were originally downloaded from.
 
-## View the status of your project
+## Status of your project
 
 ```bash
 git status
 ```
 
-This will print some basic information, such as which files have recently been modified.
+This will print current state information of the branch, such as which files have recently been modified.
 
-You should check your status anytime you’re confused. Git will print additional information depending on what’s currently going on in order to help you out.
+Here is the list of possible outputs for a file :   
+
+| Name | Description |
+|------|-------------|
+| M | Modified |
+| T | File type changed (regular file, symbolic link or submodule) |
+| A | Added |
+| D | Deleted |
+| R | Renamed |
+| C | Copied |
+| U | Updated but unmerged |
+
+You should check your status anytime you are about to do git commands.
 
 ## Create a new branch
 
@@ -54,8 +64,11 @@ For more info about creating branches please refer to [Gitflow/branch](../branch
 
 ## Check out a branch
 
+Switch to an existing branch
+
 ```bash
 git checkout <existing-branch-name>
+git pull
 ```
 
 You can think of this like “resuming” from an existing checkpoint. All your files will be reset to whatever state they were in on that particular branch.
@@ -81,6 +94,8 @@ For each group of changes, you’ll see what the file used to look like (prefixe
 See further down for more advanced examples of this command.
 
 ## Stage your changes
+
+Tell Git which files should be included in your next commit:
 
 ```bash
 git add <files>
@@ -108,10 +123,6 @@ git add --all
 
 ## Commit your staged changes
 
-```bash
-git commit -m "<conventional-commit-message>"
-```
-
 This will open your default command-line text editor and ask you to type in a commit message. As soon as you save and quit, your commit will be saved locally.
 
 The commit message is important to help other people understand what was changed and why you changed it. There’s a brief guide [here](/gitflow/conventional-commit/) explaining how to write useful commit messages.
@@ -119,19 +130,18 @@ The commit message is important to help other people understand what was changed
 You can use the -m flag as a shortcut to write a message. For example:
 
 ```bash
-git commit -m “Add a new feature”
+git commit -m "<conventional-commit-message>"
 ```
 
 ## Push your branch on the server
-
-```bash
-git push
-```
 
 This will upload your branch to the remote named origin (remember, that’s the URL defined initially during clone).
 
 After a successful push, your teammates will then be able to pull your branch to view your commits (see git pull below).
 
+```bash
+git push
+```
 
 ## Fetch the latest info about a repo
 
